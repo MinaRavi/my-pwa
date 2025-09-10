@@ -1,7 +1,63 @@
-* { box-sizing: border-box; }
-body { margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; background: #0f1115; color: #eaeaea; }
-.app { max-width: 720px; margin: 0 auto; padding: 2rem; }
-h1 { margin: 0 0 1rem; }
-button { padding: 0.75rem 1rem; border: 0; border-radius: 12px; background: #2a2f3a; color: #eaeaea; font-weight: 600; cursor: pointer; }
-button:active { transform: translateY(1px); }
-#status { margin-top: 1rem; opacity: 0.85; }
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #0f1115;
+    font-family: Arial, sans-serif;
+    color: white;
+  }
+  
+  .app {
+    text-align: center;
+  }
+  
+  #counter {
+    font-size: 6rem;
+    margin-bottom: 1rem;
+  }
+  
+  button {
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 12px;
+    background: #2a2f3a;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: transform 0.1s;
+  }
+  button:active {
+    transform: scale(0.95);
+  }
+  
+  #game-over {
+    margin-top: 2rem;
+  }
+  #game-over h2 {
+    color: red;
+    font-size: 3rem;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  /* Bubble animation */
+  .bubble {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2rem;
+    color: #4ade80;
+    opacity: 1;
+    animation: rise 1s forwards;
+  }
+  
+  @keyframes rise {
+    0% { transform: translateX(-50%) translateY(0); opacity: 1; }
+    100% { transform: translateX(-50%) translateY(-150px); opacity: 0; }
+  }
+  
