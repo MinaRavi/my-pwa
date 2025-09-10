@@ -3,20 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>My PWA</title>
-  <meta name="theme-color" content="#111111" />
-  <link rel="manifest" href="manifest.json" />
+  <title>Click Counter Game</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="apple-touch-icon" href="icons/icon-192.png" />
 </head>
 <body>
   <main class="app">
-    <h1>🚀 My PWA</h1>
-    <p>Install me and try going offline — I still work.</p>
-    <button id="ping">Click Me</button>
-    <p id="status"></p>
-  </main>
+    <h1 id="counter">0</h1>
+    <button id="click-btn">Click Me</button>
 
+    <div id="game-over" class="hidden">
+      <h2>GAME OVER</h2>
+      <button id="restart-btn">Refresh</button>
+    </div>
+
+    <div id="bubbles"></div>
+  </main>
   <script src="app.js"></script>
 </body>
 </html>
